@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeBSD 11.4 Errno Matrix & Syscall Precedence Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="app-header">
+        <div class="header-content">
+            <div class="logo-area">
+                <span class="badge">FreeBSD 11.4</span>
+                <h1>Errno Matrix & Syscall Precedence</h1>
+            </div>
+            <p class="subtitle">Complete POSIX error number reference (1 through ELAST = 96) and kernel validation precedence simulator.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Navigation Tabs -->
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="matrix-tab">Errno Matrix</button>
+            <button class="tab-btn" data-tab="simulator-tab">Error Precedence Simulator</button>
+            <button class="tab-btn" data-tab="elast-tab">ELAST & Bounds Auditor</button>
+        </nav>
+
+        <!-- Matrix Tab -->
+        <section id="matrix-tab" class="tab-content active">
+            <div class="toolbar">
+                <div class="search-box">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    <input type="text" id="searchInput" placeholder="Search by name (e.g. EACCES), code, or description...">
+                </div>
+                <div class="filters">
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="VFS / Filesystem">VFS / Filesystem</option>
+                        <option value="Process & Memory">Process & Memory</option>
+                        <option value="Networking & Sockets">Networking & Sockets</option>
+                        <option value="Device & I/O">Device & I/O</option>
+                        <option value="IPC & Threading">IPC & Threading</option>
+                        <option value="Permission & Security">Permission & Security</option>
+                        <option value="System Limit">System Limit</option>
+                    </select>
+                    <button id="resetFilters" class="btn-secondary">Reset</button>
+                </div>
+            </div>
+
+            <div class="stats-bar">
+                <span>Showing <strong id="visibleCount">0</strong> of <strong id="totalCount">96</strong> error codes</span>
+                <span class="elast-indicator">ELAST Limit: <strong>96</strong></span>
+            </div>
+
+            <div class="table-container">
+                <table id="errnoTable">
+                    <thead>
+                        <tr>
+                            <th data-sort="code">Code</th>
+                            <th data-sort="name">Constant</th>
+                            <th data-sort="category">Category</th>
+                            <th>Description</th>
+                            <th>Typical Syscall Sources</th>
+                        </tr>
+                    </thead>
+                    <tbody id="errnoTableBody">
+                        <!-- Populated by app.js -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Simulator Tab -->
+        <section id="simulator-tab" class="tab-content">
+            <div class="simulator-card">
+                <h2>Syscall Error Precedence Simulator</h2>
+                <p>In FreeBSD kernel execution, argument and state validation follows strict precedence rules (e.g., pointer validation before descriptor validation, and descriptor validation before buffer bounds checking). Test how simulated syscall inputs trigger specific errnos.</p>
+                
+                <div class="simulator-grid">
+                    <div class="sim-controls">
+                        <h3>Simulated Syscall Parameters</h3>
+                        
+                        <div class="form-group">
+                            <label for="simSyscall">Syscall Target</label>
+                            <select id="simSyscall">
+                                <option value="read">read(int fd, void *buf, size_t nbytes)</option>
+                                <option value="write">write(int fd, const void *buf, size_t nbytes)</option>
+                                <option value="socket">socket(int domain, int type, int protocol)</option>
+                                <option value="connect">connect(int s, const struct sockaddr *name, socklen_t namelen)</option>
+                                <option value="mmap">mmap(void *addr, size_t len, int prot, int flags, int fd, off_t offset)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="badPointer" checked> Invalid Pointer / Unmapped Address (<code class="err-tag">EFAULT</code>)
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="badFd"> Invalid File Descriptor (<code class="err-tag">EBADF</code>)
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="badArg"> Invalid Argument / Bad Flags (<code class="err-tag">EINVAL</code>)
+                            </label>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label>
+                                <input type="checkbox" id="permissionDenied"> Permission Denied / Restricted (<code class="err-tag">EACCES</code> / <code class="err-tag">EPERM</code>)
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="simMemoryLimit">Available Memory / Limit State</label>
+                            <select id="simMemoryLimit">
+                                <option value="normal">Normal</option>
+                                <option value="nomem">Exhausted Swap / Kernel Memory (<code class="err-tag">ENOMEM</code>)</option>
+                            </select>
+                        </div>
+
+                        <button id="runSimBtn" class="btn-primary">Evaluate Precedence</button>
+                    </div>
+
+                    <div class="sim-results">
+                        <h3>Kernel Validation Pipeline</h3>
+                        <div id="pipelineSteps" class="pipeline-steps">
+                            <!-- Rendered dynamically -->
+                        </div>
+                        <div id="simVerdict" class="sim-verdict">
+                            <div class="verdict-label">Triggered Errno Result:</div>
+                            <div id="verdictResult" class="verdict-value">-</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ELAST Tab -->
+        <section id="elast-tab" class="tab-content">
+            <div class="elast-card">
+                <h2>FreeBSD 11.4 ELAST & Boundary Analysis</h2>
+                <p>FreeBSD defines error numbers ranging from 1 up to <code>ELAST</code>. In FreeBSD 11.4, <code>ELAST</code> is set to <strong>96</strong> (`ENOTRECOVERABLE`). Any values beyond ELAST or unmapped gaps require careful bounds checking in relinkers and syscall translation layers.</p>
+                
+                <div class="elast-grid">
+                    <div class="metric-box">
+                        <span class="metric-val">96</span>
+                        <span class="metric-lbl">ELAST Value</span>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-val">1 - 96</span>
+                        <span class="metric-lbl">Standard POSIX / FreeBSD Range</span>
+                    </div>
+                    <div class="metric-box">
+                        <span class="metric-val">0.0%</span>
+                        <span class="metric-lbl">Gap Rate (Fully Dense up to 96)</span>
+                    </div>
+                </div>
+
+                <h3>Boundary Verification Tool</h3>
+                <div class="boundary-checker">
+                    <input type="number" id="testErrnoInput" min="1" max="120" value="14" placeholder="Enter errno integer...">
+                    <button id="checkErrnoBtn" class="btn-secondary">Check Status</button>
+                </div>
+                <div id="boundaryResult" class="boundary-result">
+                    Enter an integer to inspect whether it falls within valid FreeBSD 11.4 errno space.
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>FreeBSD 11.4 Errno Matrix & Syscall Precedence Simulator &bull; Built with HTML5, CSS3, & Vanilla JavaScript</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
