@@ -1,0 +1,15 @@
+{
+  "IPPROTO_TCP": {
+    "TCP_NODELAY": 1,
+    "TCP_MAXSEG": 2,
+    "TCP_NOPUSH": 4,
+    "TCP_NOOPT": 8,
+    "TCP_MD5SIG": 16,
+    "TCP_INFO": 32,
+    "TCP_CONGESTION": 64,
+    "TCP_KEEPINIT": 128,
+    "TCP_KEEPIDLE": 256,
+    "TCP_KEEPINTVL": 512,
+    "TCP_KEEPCNT": 1024
+  }
+}
