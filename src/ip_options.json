@@ -1,0 +1,33 @@
+{
+  "IPPROTO_IP": {
+    "IP_OPTIONS": 1,
+    "IP_HDRINCL": 2,
+    "IP_TOS": 3,
+    "IP_TTL": 4,
+    "IP_RECVOPTS": 5,
+    "IP_RECVRETOPTS": 6,
+    "IP_RECVDSTADDR": 7,
+    "IP_RETOPTS": 8,
+    "IP_MULTICAST_IF": 9,
+    "IP_MULTICAST_TTL": 10,
+    "IP_MULTICAST_LOOP": 11,
+    "IP_ADD_MEMBERSHIP": 12,
+    "IP_DROP_MEMBERSHIP": 13,
+    "IP_MULTICAST_VIF": 14,
+    "IP_RSVP_ON": 15,
+    "IP_RSVP_OFF": 16,
+    "IP_RSVP_VIF_ON": 17,
+    "IP_RSVP_VIF_OFF": 18,
+    "IP_PORTRANGE": 19,
+    "IP_RECVIF": 20
+  },
+  "IPPROTO_IPV6": {
+    "IPV6_UNICAST_HOPS": 4,
+    "IPV6_MULTICAST_IF": 9,
+    "IPV6_MULTICAST_HOPS": 10,
+    "IPV6_MULTICAST_LOOP": 11,
+    "IPV6_JOIN_GROUP": 12,
+    "IPV6_LEAVE_GROUP": 13,
+    "IPV6_V6ONLY": 27
+  }
+}
