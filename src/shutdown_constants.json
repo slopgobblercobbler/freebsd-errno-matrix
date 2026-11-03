@@ -1,0 +1,5 @@
+{
+  "SHUT_RD": 0,
+  "SHUT_WR": 1,
+  "SHUT_RDWR": 2
+}
