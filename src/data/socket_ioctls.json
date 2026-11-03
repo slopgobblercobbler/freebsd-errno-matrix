@@ -1,0 +1,58 @@
+[
+  {
+    "name": "FIONREAD",
+    "value": "0x4004667f",
+    "group": "Generic I/O",
+    "description": "Get number of bytes immediately available to read from socket buffer",
+    "argumentType": "int*",
+    "freebsdErrnos": ["EBADF", "EFAULT", "ENOTSOCK", "EINVAL"]
+  },
+  {
+    "name": "FIONBIO",
+    "value": "0x8004667e",
+    "group": "Generic I/O",
+    "description": "Set/clear non-blocking I/O mode on socket descriptor",
+    "argumentType": "int*",
+    "freebsdErrnos": ["EBADF", "EFAULT", "ENOTSOCK", "EINVAL"]
+  },
+  {
+    "name": "FIOASYNC",
+    "value": "0x8004667d",
+    "group": "Generic I/O",
+    "description": "Set/clear asynchronous I/O signaling (SIGIO)",
+    "argumentType": "int*",
+    "freebsdErrnos": ["EBADF", "EFAULT", "ENOTSOCK", "EINVAL"]
+  },
+  {
+    "name": "SIOCGIFCONF",
+    "value": "0xc0206924",
+    "group": "Network Interface",
+    "description": "Retrieve list of configured network interfaces and network addresses",
+    "argumentType": "struct ifconf*",
+    "freebsdErrnos": ["EFAULT", "EINVAL", "EBADF", "ENOTSOCK"]
+  },
+  {
+    "name": "SIOCGIFFLAGS",
+    "value": "0xc0206911",
+    "group": "Network Interface",
+    "description": "Get active operational status and flag bits for specified network interface",
+    "argumentType": "struct ifreq*",
+    "freebsdErrnos": ["EFAULT", "ENXIO", "EINVAL", "EBADF"]
+  },
+  {
+    "name": "SIOCGIFADDR",
+    "value": "0xc0206921",
+    "group": "Network Interface",
+    "description": "Get unicast IP address assigned to network interface",
+    "argumentType": "struct ifreq*",
+    "freebsdErrnos": ["EFAULT", "EADDRNOTAVAIL", "ENXIO", "EINVAL"]
+  },
+  {
+    "name": "SIOCGIFNETMASK",
+    "value": "0xc0206925",
+    "group": "Network Interface",
+    "description": "Get IPv4 network subnet mask assigned to network interface",
+    "argumentType": "struct ifreq*",
+    "freebsdErrnos": ["EFAULT", "ENXIO", "EINVAL", "EBADF"]
+  }
+]
