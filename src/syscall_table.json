@@ -1,0 +1,97 @@
+{
+  "sys_exit": {
+    "nr": 1,
+    "nargs": 1,
+    "return": "void"
+  },
+  "sys_fork": {
+    "nr": 2,
+    "nargs": 0,
+    "return": "pid_t"
+  },
+  "sys_read": {
+    "nr": 3,
+    "nargs": 3,
+    "return": "ssize_t"
+  },
+  "sys_write": {
+    "nr": 4,
+    "nargs": 3,
+    "return": "ssize_t"
+  },
+  "sys_open": {
+    "nr": 5,
+    "nargs": 3,
+    "return": "int"
+  },
+  "sys_close": {
+    "nr": 6,
+    "nargs": 1,
+    "return": "int"
+  },
+  "sys_wait4": {
+    "nr": 7,
+    "nargs": 4,
+    "return": "pid_t"
+  },
+  "sys_socket": {
+    "nr": 97,
+    "nargs": 3,
+    "return": "int"
+  },
+  "sys_connect": {
+    "nr": 98,
+    "nargs": 3,
+    "return": "int"
+  },
+  "sys_accept": {
+    "nr": 99,
+    "nargs": 3,
+    "return": "int"
+  },
+  "sys_getpriority": {
+    "nr": 100,
+    "nargs": 2,
+    "return": "int"
+  },
+  "sys_send": {
+    "nr": 101,
+    "nargs": 4,
+    "return": "ssize_t"
+  },
+  "sys_recv": {
+    "nr": 102,
+    "nargs": 4,
+    "return": "ssize_t"
+  },
+  "sys_sigreturn": {
+    "nr": 103,
+    "nargs": 1,
+    "return": "int"
+  },
+  "sys_bind": {
+    "nr": 104,
+    "nargs": 3,
+    "return": "int"
+  },
+  "sys_setsockopt": {
+    "nr": 105,
+    "nargs": 5,
+    "return": "int"
+  },
+  "sys_listen": {
+    "nr": 106,
+    "nargs": 2,
+    "return": "int"
+  },
+  "sys_recvmsg": {
+    "nr": 113,
+    "nargs": 3,
+    "return": "ssize_t"
+  },
+  "sys_sendmsg": {
+    "nr": 114,
+    "nargs": 3,
+    "return": "ssize_t"
+  }
+}
