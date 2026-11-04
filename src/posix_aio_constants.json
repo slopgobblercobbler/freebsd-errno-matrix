@@ -1,0 +1,7 @@
+{
+  "LIO_READ": 0,
+  "LIO_WRITE": 1,
+  "LIO_NOP": 2,
+  "LIO_WAIT": 1,
+  "LIO_NOWAIT": 0
+}
