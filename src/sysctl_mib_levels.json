@@ -1,0 +1,12 @@
+{
+  "CTL_SYSCTL": 0,
+  "CTL_KERN": 1,
+  "CTL_VM": 2,
+  "CTL_VFS": 3,
+  "CTL_NET": 4,
+  "CTL_DEBUG": 5,
+  "CTL_HW": 6,
+  "CTL_MACHDEP": 7,
+  "CTL_USER": 8,
+  "CTL_P1003_1B": 9
+}
