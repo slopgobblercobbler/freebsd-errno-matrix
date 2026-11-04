@@ -1,0 +1,6 @@
+{
+  "JAIL_CREATE": 1,
+  "JAIL_UPDATE": 2,
+  "JAIL_ATTACH": 4,
+  "JAIL_DYING": 8
+}
