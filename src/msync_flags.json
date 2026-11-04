@@ -1,0 +1,5 @@
+{
+  "MS_SYNC": 0,
+  "MS_ASYNC": 1,
+  "MS_INVALIDATE": 2
+}
