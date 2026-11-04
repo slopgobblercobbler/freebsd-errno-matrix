@@ -1,0 +1,6 @@
+{
+  "CC_ALGO_CUBIC": "cubic",
+  "CC_ALGO_NEWRENO": "newreno",
+  "CC_ALGO_VEGAS": "vegas",
+  "CC_ALGO_DCTCP": "dctcp"
+}
