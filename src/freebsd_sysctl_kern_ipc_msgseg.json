@@ -1,0 +1,11 @@
+{
+  "sysctl": "kern.ipc.msgseg",
+  "mib": [
+    1,
+    35,
+    5
+  ],
+  "type": "int",
+  "description": "Maximum number of message segments in system",
+  "default": 2048
+}
