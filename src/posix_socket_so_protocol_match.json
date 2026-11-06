@@ -1,0 +1,6 @@
+{
+  "IPPROTO_TCP": 6,
+  "IPPROTO_UDP": 17,
+  "IPPROTO_RAW": 255,
+  "description": "Standard IP protocol numbers for socket allocation"
+}
