@@ -1,0 +1,5 @@
+{
+  "SO_REUSEPORT_LB": 65536,
+  "lb_hash_algo": "INCOMING_FLOW",
+  "max_lb_group_members": 64
+}
