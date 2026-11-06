@@ -1,0 +1,6 @@
+{
+  "TCP_NODELAY": 1,
+  "TCP_MAXSEG": 2,
+  "TCP_NOPUSH": 4,
+  "TCP_NOOPT": 8
+}
