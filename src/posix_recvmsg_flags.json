@@ -1,0 +1,6 @@
+{
+  "MSG_PEEK": 2,
+  "MSG_WAITALL": 64,
+  "MSG_DONTWAIT": 128,
+  "description": "Socket receive message operation flags"
+}
