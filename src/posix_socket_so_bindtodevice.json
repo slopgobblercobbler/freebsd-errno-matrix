@@ -1,0 +1,5 @@
+{
+  "SO_BINDTODEVICE": 4120,
+  "IFNAMSIZ": 16,
+  "device_name_null_terminated": true
+}
