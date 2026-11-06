@@ -1,0 +1,6 @@
+{
+  "SO_TIMESTAMP": "0x0400",
+  "SO_BINTIME": "0x2000",
+  "SCM_BINTIME": "0x04",
+  "SCM_REALTIME": "0x05"
+}
