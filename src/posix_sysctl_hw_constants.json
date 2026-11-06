@@ -1,0 +1,9 @@
+{
+  "HW_MACHINE": 1,
+  "HW_MODEL": 2,
+  "HW_NCPU": 3,
+  "HW_BYTEORDER": 4,
+  "HW_PHYSMEM": 5,
+  "HW_USERMEM": 6,
+  "HW_PAGESIZE": 7
+}
