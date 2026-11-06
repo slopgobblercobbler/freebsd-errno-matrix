@@ -1,0 +1,11 @@
+{
+  "sysctl": "kern.ipc.semmni",
+  "mib": [
+    1,
+    35,
+    2
+  ],
+  "type": "int",
+  "description": "Maximum number of semaphore identifiers system-wide",
+  "default": 50
+}
