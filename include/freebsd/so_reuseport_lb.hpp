@@ -2,9 +2,9 @@
 #include <string_view>
 
 namespace freebsd {
-struct SoReuseportLbDef {
-    static constexpr int opt_name = 0x10000;
+struct SoReusePortLbDef {
+    static constexpr int opt_name = 0x1010;
     static constexpr std::string_view name = "SO_REUSEPORT_LB";
-    static constexpr std::string_view desc = "Load-balanced port reuse across threads";
+    static constexpr std::string_view desc = "Even load balancing of incoming connections across listening sockets";
 };
 }
