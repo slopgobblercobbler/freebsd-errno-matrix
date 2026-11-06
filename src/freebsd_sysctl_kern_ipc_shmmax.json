@@ -1,0 +1,11 @@
+{
+  "sysctl": "kern.ipc.shmmax",
+  "mib": [
+    1,
+    35,
+    1
+  ],
+  "type": "u_long",
+  "description": "Maximum shared memory segment size in bytes",
+  "default": 536870912
+}
