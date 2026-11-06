@@ -1,0 +1,9 @@
+{
+  "SA_ONSTACK": "0x0001",
+  "SA_RESTART": "0x0002",
+  "SA_RESETHAND": "0x0004",
+  "SA_NOCLDSTOP": "0x0008",
+  "SA_NODEFER": "0x0010",
+  "SA_NOCLDWAIT": "0x0020",
+  "SA_SIGINFO": "0x0040"
+}
