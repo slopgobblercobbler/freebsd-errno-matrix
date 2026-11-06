@@ -1,0 +1,5 @@
+{
+  "AIO_CANCELED": 0,
+  "AIO_NOTCANCELED": 1,
+  "AIO_ALLDONE": 2
+}
