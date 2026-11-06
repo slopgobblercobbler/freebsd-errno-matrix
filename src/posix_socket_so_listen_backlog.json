@@ -1,0 +1,5 @@
+{
+  "SOMAXCONN": 128,
+  "SO_ACCEPTFILTER": 4096,
+  "accf_data": "httpready"
+}
