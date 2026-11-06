@@ -1,0 +1,11 @@
+{
+  "sysctl": "kern.ipc.semmsl",
+  "mib": [
+    1,
+    35,
+    6
+  ],
+  "type": "int",
+  "description": "Maximum number of semaphores per semaphore set",
+  "default": 60
+}
