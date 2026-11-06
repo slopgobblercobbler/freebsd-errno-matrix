@@ -1,0 +1,6 @@
+{
+  "CLOCK_REALTIME_FAST": 10,
+  "CLOCK_MONOTONIC_FAST": 12,
+  "CLOCK_UPTIME_FAST": 8,
+  "fast_clock_resolution_ms": 10
+}
