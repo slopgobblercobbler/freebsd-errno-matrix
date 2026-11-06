@@ -1,0 +1,6 @@
+{
+  "l_onoff_size_bytes": 4,
+  "l_linger_size_bytes": 4,
+  "struct_size_bytes": 8,
+  "max_linger_seconds": 65535
+}
