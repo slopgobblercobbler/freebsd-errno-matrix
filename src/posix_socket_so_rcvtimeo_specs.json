@@ -1,0 +1,6 @@
+{
+  "SO_RCVTIMEO": 4102,
+  "SO_SNDTIMEO": 4101,
+  "timeval_sec_max": 2147483647,
+  "timeval_usec_max": 999999
+}
