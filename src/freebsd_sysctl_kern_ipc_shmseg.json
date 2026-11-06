@@ -1,0 +1,11 @@
+{
+  "sysctl": "kern.ipc.shmseg",
+  "mib": [
+    1,
+    35,
+    3
+  ],
+  "type": "int",
+  "description": "Maximum number of shared memory segments per process",
+  "default": 32
+}
