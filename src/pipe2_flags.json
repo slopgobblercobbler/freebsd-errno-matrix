@@ -1,0 +1,5 @@
+{
+  "O_CLOEXEC": "0x00100000",
+  "O_NONBLOCK": "0x00000004",
+  "supported_pipe2_mask": "0x00100004"
+}
