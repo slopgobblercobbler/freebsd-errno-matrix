@@ -1,0 +1,10 @@
+{
+  "sysctl": "kern.proc.sv_name",
+  "mib": [
+    1,
+    14,
+    40
+  ],
+  "type": "string",
+  "description": "Process system vector ABI compatibility layer name"
+}
