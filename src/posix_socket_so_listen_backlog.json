@@ -1,5 +1,5 @@
 {
-  "SOMAXCONN": 128,
-  "SO_ACCEPTFILTER": 4096,
-  "accf_data": "httpready"
+  "SOMAXCONN_DEFAULT": 128,
+  "SOMAXCONN_MAX": 4096,
+  "description": "FreeBSD socket listen queue maximum connection backlog limits"
 }
