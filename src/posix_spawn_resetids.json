@@ -1,0 +1,4 @@
+{
+  "POSIX_SPAWN_RESETIDS": 1,
+  "description": "Reset effective user and group IDs to real IDs on spawn"
+}
