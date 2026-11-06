@@ -1,0 +1,5 @@
+{
+  "KERN_PROC_GROUPS": 34,
+  "NGROUPS_MAX": 1024,
+  "group_id_size_bytes": 4
+}
