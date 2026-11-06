@@ -1,0 +1,5 @@
+{
+  "SO_OOBINLINE": 256,
+  "sol_level": "SOL_SOCKET",
+  "description": "Leave received out-of-band data inline with normal stream"
+}
