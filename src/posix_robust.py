@@ -1,0 +1,3 @@
+
+# ENOTRECOVERABLE = 95: State not recoverable
+ENOTRECOVERABLE = 95
