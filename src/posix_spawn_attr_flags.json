@@ -1,0 +1,6 @@
+{
+  "POSIX_SPAWN_SETPGROUP": 2,
+  "POSIX_SPAWN_SETSIGMASK": 8,
+  "POSIX_SPAWN_SETSIGDEF": 16,
+  "description": "POSIX spawn attribute control bitmask flags"
+}
