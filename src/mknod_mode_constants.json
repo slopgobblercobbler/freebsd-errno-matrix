@@ -1,0 +1,9 @@
+{
+  "S_IFIFO": "0x1000",
+  "S_IFCHR": "0x2000",
+  "S_IFDIR": "0x4000",
+  "S_IFBLK": "0x6000",
+  "S_IFREG": "0x8000",
+  "S_IFLNK": "0xA000",
+  "S_IFSOCK": "0xC000"
+}
