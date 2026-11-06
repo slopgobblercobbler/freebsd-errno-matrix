@@ -1,0 +1,11 @@
+{
+  "sysctl": "kern.ipc.msgmnb",
+  "mib": [
+    1,
+    35,
+    4
+  ],
+  "type": "int",
+  "description": "Maximum bytes allowed in a single IPC message queue",
+  "default": 2048
+}
