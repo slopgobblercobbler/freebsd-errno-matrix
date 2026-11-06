@@ -1,0 +1,6 @@
+{
+  "SO_PROTOCOL": 38,
+  "SO_ACCEPTCONN": "0x0002",
+  "SO_TYPE": "0x1008",
+  "SO_ERROR": "0x1007"
+}
