@@ -1,0 +1,6 @@
+{
+  "O_SYNC": "0x0080",
+  "O_DSYNC": "0x1000",
+  "AIO_SYNC_DATA": 1,
+  "AIO_SYNC_ALL": 2
+}
