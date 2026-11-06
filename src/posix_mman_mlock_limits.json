@@ -1,0 +1,5 @@
+{
+  "MCL_CURRENT": 1,
+  "MCL_FUTURE": 2,
+  "RLIMIT_MEMLOCK": 6
+}
