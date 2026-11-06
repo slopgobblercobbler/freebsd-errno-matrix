@@ -1,0 +1,10 @@
+{
+  "sysctl": "kern.proc.vm_layout",
+  "mib": [
+    1,
+    14,
+    39
+  ],
+  "type": "struct kinfo_vm_layout",
+  "description": "Process virtual memory address space layout bounds"
+}
