@@ -1,0 +1,8 @@
+{
+  "RTP_PRIO_REALTIME": 2,
+  "RTP_PRIO_NORMAL": 3,
+  "RTP_PRIO_IDLE": 4,
+  "RTP_PRIO_FIFO": 1,
+  "RTP_PRIO_MIN": 0,
+  "RTP_PRIO_MAX": 31
+}
