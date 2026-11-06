@@ -1,0 +1,9 @@
+{
+  "NOTE_DELETE": "0x0001",
+  "NOTE_WRITE": "0x0002",
+  "NOTE_EXTEND": "0x0004",
+  "NOTE_ATTRIB": "0x0008",
+  "NOTE_LINK": "0x0010",
+  "NOTE_RENAME": "0x0020",
+  "NOTE_REVOKE": "0x0040"
+}
