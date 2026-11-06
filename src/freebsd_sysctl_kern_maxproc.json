@@ -1,0 +1,10 @@
+{
+  "sysctl": "kern.maxproc",
+  "mib": [
+    1,
+    6
+  ],
+  "type": "int",
+  "description": "Maximum simultaneous process limit",
+  "default": 10000
+}
