@@ -1,0 +1,10 @@
+{
+  "sysctl": "kern.proc.all",
+  "mib": [
+    1,
+    14,
+    0
+  ],
+  "type": "struct kinfo_proc[]",
+  "description": "Enumerates all active system processes"
+}
