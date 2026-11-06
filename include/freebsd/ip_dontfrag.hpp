@@ -5,6 +5,6 @@ namespace freebsd {
 struct IpDontFragDef {
     static constexpr int opt_name = 67;
     static constexpr std::string_view name = "IP_DONTFRAG";
-    static constexpr std::string_view desc = "Set DF bit to avoid IP-level fragmentation";
+    static constexpr std::string_view desc = "Set or clear DF bit on outgoing IPv4 datagrams";
 };
 }
