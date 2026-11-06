@@ -1,0 +1,5 @@
+{
+  "KERN_PROC_ARGS": 7,
+  "KERN_PROC_PATHNAME": 12,
+  "KERN_PROC_SV_NAME": 13
+}
