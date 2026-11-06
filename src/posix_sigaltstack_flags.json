@@ -1,6 +1,6 @@
 {
-  "SS_ONSTACK": "0x0001",
-  "SS_DISABLE": "0x0004",
+  "SS_ONSTACK": 1,
+  "SS_DISABLE": 4,
   "MINSIGSTKSZ": 2048,
   "SIGSTKSZ": 32768
 }
