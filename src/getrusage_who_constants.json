@@ -1,0 +1,5 @@
+{
+  "RUSAGE_SELF": 0,
+  "RUSAGE_CHILDREN": -1,
+  "RUSAGE_THREAD": 1
+}
