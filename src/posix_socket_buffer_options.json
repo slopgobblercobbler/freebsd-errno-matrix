@@ -1,0 +1,6 @@
+{
+  "SO_SNDBUF": 4097,
+  "SO_RCVBUF": 4098,
+  "description": "Socket send and receive buffer size configuration options",
+  "sol_level": "SOL_SOCKET"
+}
