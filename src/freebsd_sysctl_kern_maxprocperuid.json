@@ -1,0 +1,10 @@
+{
+  "sysctl": "kern.maxprocperuid",
+  "mib": [
+    1,
+    7
+  ],
+  "type": "int",
+  "description": "Maximum process count limit per user ID",
+  "default": 5000
+}
