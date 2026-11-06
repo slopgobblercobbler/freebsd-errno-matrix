@@ -1,0 +1,6 @@
+{
+  "FD_SETSIZE": 1024,
+  "NFDBITS": 64,
+  "howmany_words": 16,
+  "storage_bytes": 128
+}
