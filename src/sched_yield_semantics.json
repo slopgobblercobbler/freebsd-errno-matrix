@@ -1,0 +1,6 @@
+{
+  "syscall_number": 331,
+  "always_succeeds": true,
+  "returns_zero": true,
+  "sets_errno_on_failure": false
+}
